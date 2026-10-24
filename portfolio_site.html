@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vasanth | DevOps & Platform Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
+        body { background-color: #0f172a; color: #f8fafc; padding: 2rem; min-height: 100vh; display: flex; justify-content: center; }
+        
+        .bento-container {
+            max-width: 1200px; width: 100%; display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem; grid-auto-rows: minmax(150px, auto);
+        }
+        
+        .box {
+            background: #1e293b; border-radius: 24px; padding: 2rem;
+            border: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .box:hover { transform: translateY(-3px); border-color: rgba(99, 102, 241, 0.4); }
+
+        @media (min-width: 900px) {
+            .span-2-col { grid-column: span 2; }
+            .span-3-col { grid-column: span 3; }
+        }
+
+        .box-intro { background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%); }
+        .box-intro h1 { font-size: 3rem; margin-bottom: 0.5rem; line-height: 1.1; font-weight: 700; }
+        .box-intro h2 { font-size: 1.3rem; color: #818cf8; font-weight: 500; margin-bottom: 1rem; }
+        
+        .btn { 
+            display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+            background: rgba(255,255,255,0.05); color: #fff; text-decoration: none; 
+            padding: 1rem; border-radius: 12px; font-weight: 500;
+            transition: background 0.2s; border: 1px solid rgba(255,255,255,0.1); width: 100%; margin-bottom: 0.5rem;
+        }
+        .btn:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.3); }
+        .btn svg { width: 20px; height: 20px; fill: currentColor; }
+
+        .box-title { font-size: 1.3rem; font-weight: 700; margin-bottom: 1.5rem; color: #fff; border-bottom: 1px solid #334155; padding-bottom: 0.5rem; }
+        
+        .exp-item { margin-bottom: 1.5rem; }
+        .exp-item:last-child { margin-bottom: 0; }
+        .exp-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.2rem; }
+        .exp-role { font-weight: 700; font-size: 1.1rem; color: #f8fafc; }
+        .exp-head-li { font-weight: 700; font-size: 0.9rem; color: #c6cacf; }
+        .exp-date { color: #94a3b8; font-size: 0.95rem; font-weight: 500; }
+        .exp-comp { color: #818cf8; font-size: 0.9rem; font-weight: 500; margin-bottom: 0.8rem; }
+        .exp-comp-highlight { font-size: 1rem; font-weight: 700; color: #818cf8; margin-right: 0.3rem; }
+        
+        .exp-list { list-style: none; padding-left: 0; margin-top: 0.5rem; }
+        .exp-list li { position: relative; padding-left: 1.2rem; color: #94a3b8; font-size: 0.95rem; margin-bottom: 0.4rem; line-height: 1.5; }
+        .exp-list li::before { content: '▹'; position: absolute; left: 0; color: #64748b; }
+
+        .skills-wrap { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+        .skill-badge { background: rgba(99, 102, 241, 0.15); color: #a5b4fc; padding: 0.4rem 0.8rem; border-radius: 8px; font-size: 0.9rem; font-weight: 500; }
+    </style>
+</head>
+<body>
+
+    <div class="bento-container">
+        
+        <div class="box box-intro span-2-col">
+            <h1>Vasantha Raman A</h1> <!--[cite: 3]-->
+            <h2>Platform & DevOps Engineer </h2> <!--[cite: 3]-->
+            <p style="color: #94a3b8; font-size: 1.05rem; line-height: 1.6;">Software engineer specializing in infrastructure automation, robust backend security, and DevOps. I manage GitOps deployments and lifecycle acceleration for large-scale microservice architectures.</p> <!--[cite: 3]-->
+        </div>
+
+        <div class="box">
+            <a href="https://github.com/VasanthaRaman" class="btn" target="_blank"> <!--[cite: 3]-->
+                <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg> <!--[cite: 3]-->
+                GitHub Profile <!--[cite: 3]-->
+            </a>
+            <a href="https://www.linkedin.com/in/vasantharaman12" class="btn" target="_blank"> <!--[cite: 3]-->
+                <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <!--[cite: 3]-->
+                LinkedIn Connect <!--[cite: 3]-->
+            </a>
+            <a href="mailto:vasantharaman003@gmail.com" class="btn"> <!--[cite: 3]-->
+                <svg viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg> <!--[cite: 3]-->
+                Send an Email <!--[cite: 3]-->
+            </a>
+             <a href="https://drive.google.com/file/d/1JZaD_w1Y3fJKymVeg4fn2AHOk0SxRno2/view?usp=sharing" class="btn" target="_blank">
+                <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                Download Resume
+            </a>
+        </div>
+
+        <div class="box span-2-col">
+            <h3 class="box-title">Professional Experience</h3> <!--[cite: 3]-->
+            
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-role">Software Engineer 2 (DevOps)</div>  <!--[cite: 3]-->
+                    <div class="exp-date">Oct 2024 - Present</div>  <!--[cite: 3]-->
+                </div>
+                <div class="exp-comp"><span class="exp-comp-highlight">F5 | Bengaluru</span> </div> <!--[cite: 3]-->
+                <ul class="exp-list">
+                    <li>Automated microservice deployments using robust Go templates on Kubernetes.</li> <!--[cite: 3]-->
+                    <li>Orchestrate GitOps workflows leveraging ArgoCD to manage an application delivery platform with 80+ microservices.</li> <!--[cite: 3]-->
+                    <li>Actively drive hardening initiatives to ensure strict FIPS compliance and SaaS FedRAMP certification.</li> <!--[cite: 3]-->
+                </ul>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-role">Software Engineer 2 (DevOps)</div>  <!--[cite: 3]-->
+                    <div class="exp-date">May 2023 - Oct 2024</div>  <!--[cite: 3]-->
+                </div>
+                <div class="exp-comp"><span class="exp-comp-highlight">Amadeus | Bengaluru</span></div> <!--[cite: 3]-->
+                <ul class="exp-list">
+                    <li>Engineered Azure cluster deployment automation via Terraform and Ansible for 100+ application teams.</li> <!--[cite: 3]-->
+                    <li>Designed automated Zero-Downtime credential rotation frameworks for NoSQL clusters via OpenShift cronjobs and Helm.</li> <!--[cite: 3]-->
+                </ul>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-role">Software Engineer</div>  <!--[cite: 3]-->
+                    <div class="exp-date">Aug 2021 - Apr 2023</div>  <!--[cite: 3]-->
+                </div>
+                <div class="exp-comp"><span class="exp-comp-highlight">Amadeus | Bengaluru</span></div> <!--[cite: 3]-->
+                <ul class="exp-list">
+                    <li>Implemented Azure Disk Encryption and comprehensive tagging automation to enforce FinOps and IAM regulations.</li> <!--[cite: 3]-->
+                    <li>Improved Azure VM proximity placement group strategy to reduce quota issues.</li> <!--[cite: 3]-->
+                </ul>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3 class="box-title">Internships</h3> <!--[cite: 3]-->
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-role" style="font-size: 1rem;">Software Engineer Intern</div>  <!--[cite: 3]-->
+                    <div class="exp-date" style="font-size: 0.9rem;">Jan - Jun 2021</div> <!--[cite: 3]-->
+                </div>
+                <div class="exp-comp" style="margin-bottom: 0.3rem;">Amadeus | Bengaluru</div>  <!--[cite: 3]-->
+                <div style="color: #94a3b8; font-size: 0.9rem;">Developed PoC comparing CDN and Couchbase sync gateway for cache distribution.</div> <!--[cite: 3]-->
+            </div>
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-role" style="font-size: 1rem;">Software engineer intern</div>  <!--[cite: 3]-->
+                    <div class="exp-date" style="font-size: 0.9rem;">Apr - Jun 2020</div> <!--[cite: 3]-->
+                </div>
+                <div class="exp-comp" style="margin-bottom: 0.3rem;">Anantara Solutions | Chennai </div>  <!--[cite: 3]-->
+                <div style="color: #94a3b8; font-size: 0.9rem;">Converted R language data analysis code blocks to Python.</div> <!--[cite: 3]-->
+            </div>
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-role" style="font-size: 1rem;">Software Engineer Intern</div>  <!--[cite: 3]-->
+                    <div class="exp-date" style="font-size: 0.9rem;">Dec 2019 - Jan 2020</div> <!--[cite: 3]-->
+                </div>
+                <div class="exp-comp" style="margin-bottom: 0.3rem;">Sysveda Infotech | Chennai</div>  <!--[cite: 3]-->
+                <div style="color: #94a3b8; font-size: 0.9rem;">Implemented an OCR module using machine learning models for text extraction using Python.</div> <!--[cite: 3]-->
+            </div>
+        </div>
+
+        <div class="box">
+            <h3 class="box-title">Projects</h3>  <!--[cite: 3]-->
+            <ul class="exp-list">
+                <li> <div class="exp-head-li"> Grain Warehouse Management System:</div> IoT project aiming at automation of grain storage maintenance and distribution at silos while reducing wastage. </li> <!--[cite: 3]-->
+                <li> <div class="exp-head-li">Intranet Revaluation Submission system:</div> A web portal for applying to revaluation of exam results aimed at reducing paperwork. </li> <!--[cite: 3]-->
+                <li> <div class="exp-head-li">Real time captioning and Summarizer:</div> A speech to text system with web interface to convert lectures to text real-time and provide a summary of the same at the end. </li> <!--[cite: 3]-->
+            </ul>
+        </div>
+
+        <div class="box">
+            <h3 class="box-title">Publications</h3> <!--[cite: 3]-->
+            <ul class="exp-list">
+                <li><div class="exp-head-li">Recent Trends in Renewable Energy:</div> Smart Warehouse Management System.</li> <!--[cite: 3]-->
+                <li><div class="exp-head-li">Computational Intelligence in Data Science:</div> Real Time Captioning and Notes Making of Online Classes.</li> <!--[cite: 3]-->
+            </ul>
+        </div>
+
+        <div class="box">
+            <h3 class="box-title">Certifications</h3> <!--[cite: 3]-->
+            <ul class="exp-list">
+                <li><div class="exp-head-li">Microsoft Certified: Azure Fundamentals (AZ-900)</div></li> <!--[cite: 3]-->
+                <li><div class="exp-head-li">Oracle Cloud Infrastructure Foundations Certified Associate</div></li> <!--[cite: 3]-->
+                <li><div class="exp-head-li">SAFe 5 Agile Framework</div></li> <!--[cite: 3]-->
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>
